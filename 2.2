@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    cout << "Enter a number:\n";
+    int numb;
+    cin >> numb;
+    int k = 0;
+    int a = numb;
+    int f = 1;
+    while (a >= 1 && f <= 1){
+        f = a % 10;
+        a = a / 10;
+        k = k + 1;
+    }
+    int two = 1;
+    int sum = 0;
+    a = numb;
+    while (k > 0){
+        f = a % 10;
+        a = a / 10;
+        sum = sum + f * two;
+        two = two * 2;
+        k = k - 1;
+    }
+    cout << sum;
+    return 0;
+}
